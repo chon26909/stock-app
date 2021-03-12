@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+    <button mat-button (click)="onClickNavToggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span *ngIf="!moblieQueryMax">Chon</span>
+    <span class="flex-fill"></span>
+    <div class="d-flex align-items-center mr-2">
+        <button mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>
+        <div class="vl"></div>
+        <button mat-icon-button>
+            <mat-icon [matBadge]="emailBadge" matBadgeColor="warn">mail_outline</mat-icon>
+        </button>
+        <div class="vl"></div>
+        <button mat-icon-button>
+            <mat-icon [matBadge]="notiBadge" matBadgeColor="warn">notifications_none</mat-icon>
+        </button>
+    </div>
+    <button mat-button [matMenuTriggerFor]="menu">
+        <img [src]="img_profile" class="avatar" alt="">
+        <span class="ml-2">Bossza</span>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+        </button>
+    </mat-menu>
+
+
+
+
+</mat-toolbar>
