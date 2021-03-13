@@ -1,9 +1,12 @@
-<mat-sidenav-container class="example-container">
+<mat-sidenav-container fullscreen>
   <mat-sidenav #sidenav [mode]="moblieQueryMax.matches ? 'over' : 'side' "
     [opened]="moblieQueryMax.matches ? false : true">
     <app-sidenav></app-sidenav>
   </mat-sidenav>
   <mat-sidenav-content>
     <app-header [media_query]="moblieQueryMax.matches" (navToggle)="sidenav.toggle()"></app-header>
+    <div class="p-3">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,0 +1,48 @@
+<mat-card class="w-100 p-4">
+    <form #productForm="ngForm" (submit)="onSubmit(productForm)">
+        <mat-card-title>Create Product</mat-card-title>
+        <mat-card-content class="mt-4">
+            <div class="row">
+                <div class="col-6">
+                    <div class="mt-2">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Name</mat-label>
+                            <input matInput type="text" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="mt-2">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Price</mat-label>
+                            <input matInput type="number" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="mt-2">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Stock</mat-label>
+                            <input matInput type="number" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="mt-2">
+                        <button mat-flat-button color="primary">Add Product</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <!-- <img class="img-fluid" *ngIf="imagePreview" [src]="imagePreview" alt="">
+                    <button mat-stroked-button (click)="fileInput.click()" type="button">
+                        <mat-icon>photo</mat-icon>
+                        <span>Select Image</span>
+                    </button>
+                    <input (change)="onPreviewImage()" #fileInput type="file" accept="image/*"
+                        class="image-product-preview"> -->
+
+                    <button mat-stroked-button (click)="fileInput.click()" type="button">
+                        <mat-icon>photo</mat-icon>
+                        <span>Select image</span>
+                    </button>
+                    <input (change)="onPreviewImage()" #fileInput type="file" accept="image/*" class="image-product-preview">
+                </div>
+            </div>
+
+        </mat-card-content>
+    </form>
+</mat-card>
